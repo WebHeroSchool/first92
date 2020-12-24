@@ -43,7 +43,7 @@ header {
 
 .menu__item:last-child {
   margin-right: 0;
-  }
+}
 
 .menu__item:after {
   position: absolute;
