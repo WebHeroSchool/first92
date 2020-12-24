@@ -1,40 +1,69 @@
 .main-content__title {
   font-family: "Roboto", sans-serif;
 }
+
 body {
   margin: 0;
-  border: dashed 1px red;
 }
+
 .wrapper {
   margin: auto;
   width: 77%;
-  border: dashed 1px red;
 }
+
 .logo, .menu {
   display: inline-block;
-  border: dashed 1px red;
 }
+
 header {
   padding: 40px 0;
   display: flex;
   justify-content: space-between;
 }
+
 .logo{
   width: 190px;
   height: 35px;
   background: url(img/logo.svg);
 }
+
 .menu {
   display: flex;
   align-items: center;
 }
+
 .menu__item {
-  padding: 0 13px;
-  border: dashed 1px red;
+  position: relative;
+  margin-right: 26px;
+  font: 500 18px/21px Roboto, arial, helvetica, sans-serif;
+  color: #000;
+  text-decoration: none;
+  transition: opacity .5s;
 }
+
 .menu__item:last-child {
-  padding-right: 0;
+  margin-right: 0;
+  }
+
+.menu__item:after {
+  position: absolute;
+  display: block;
+  content:'';
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #0056ec;
+  transition: opacity .5s, width .5s;
 }
-.main-content__subtitle {
-  font-family: pt_serif, arial, helvetica;
+
+.menu__item:hover {
+  opacity: .5;
+  transform: scale(1.2);
+  transition: .5s;
+}
+
+.menu__item:hover:after,
+.menu__item_active:after {
+  opacity: 1;
+  width: 100%;
 }
